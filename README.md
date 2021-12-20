@@ -1,8 +1,23 @@
 # Hey::Log::Parser
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hey/log/parser`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to Hey Log Parser!
 
-TODO: Delete this and the text above, and describe your gem
+This is a Ruby app which intended to help parsing a web log file and to sort it based on popularity.
+
+The input should be a file like this:
+```
+/about 184.123.665.067
+/about 184.123.665.060
+/contact 836.973.694.403
+...
+```
+
+And the output should go like this:
+```
+/about 29, /contact 18, ...
+```
+
+And now we can see which path is visited the most :)
 
 ## Installation
 
@@ -22,11 +37,16 @@ Or install it yourself as:
 
 ## Usage
 
-1. Prepare your file and put it inside directory `config` using file name `webserver.log`. 
-2. Then run `rake test` to run the tests.
-3. To start parsing, run `bin/start` on the terminal.
-4. Once the result is ready, you can open `config/result_log`
-5. If there is any errors, you can find `config/error_result` 
+1. Prepare your log file with this format:
+```
+/about 184.123.665.067
+/contact 836.973.694.403
+```
+2. Put it inside directory `config` using file name `webserver.log`
+3. Then run `rake test` to run the tests.
+4. To start parsing, run `bin/start` on the terminal.
+5. Once the result is ready, you can open `config/result` and `config/unique_result`
+6. If there is any errors, you can find `config/error_result` 
 
 ## Development
 
