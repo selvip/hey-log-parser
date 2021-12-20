@@ -6,7 +6,12 @@ source "https://rubygems.org"
 gemspec
 
 gem "rake", "~> 13.0"
+group :test do
+  gem "minitest", "~> 5.0"
+  gem "rubocop", "~> 1.7"
+end
 
-gem "minitest", "~> 5.0"
-
-gem "rubocop", "~> 1.7"
+group :development do
+  gem "pry"
+  gem "pry-byebug"
+end
