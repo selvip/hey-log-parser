@@ -11,7 +11,6 @@ module Hey
     # Rubocop note: This is main parser to read the file and parse it
     module Parser
       class Error < StandardError; end
-      # Your code goes here...
       puts "Start parsing..."
       file_path = "config/webserver.log"
 

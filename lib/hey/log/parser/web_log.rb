@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# class Hey::Log::Parser::WebLogList
-
 module Hey
   module Log
     module Parser

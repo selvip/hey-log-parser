@@ -132,9 +132,6 @@ module Hey
           end
         end
       end
-
-      # def test
-      # end
     end
   end
 end
