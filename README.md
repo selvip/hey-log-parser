@@ -37,7 +37,7 @@ Or install it yourself as:
 
 ## Usage
 
-1. Prepare your log file with this format:
+1. Prepare your log file in this format:
 ```
 /about 184.123.665.067
 /contact 836.973.694.403
