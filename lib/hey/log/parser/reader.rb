@@ -79,6 +79,10 @@ module Hey
           Hey::Log::Parser::Printer.print("config/unique_result", unique_sorted_list_message)
         end
 
+        def print_html
+          Hey::Log::Parser::Printer.print("config/result.html", html_text)
+        end
+
         private
 
         def valid_path?(word)
@@ -88,6 +92,22 @@ module Hey
         def valid_ip?(word)
           # IP here only check if it is max 3 digit between each dot (not real IP)
           /^\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d$/.match(word).to_s == word
+        end
+
+        def html_text
+          text = ENV["HTML_HEAD"]
+          @web_log_list.sorted_list.each do |line|
+            text += """
+              <tr>
+                <th scope=\"row\">#</th>
+                <td>#{line.path}</td>
+                <td>#{line.count}</td>
+                <td>#{line.unique_visitors_count}</td>
+              </tr>
+            """
+          end
+          text += ENV["HTML_FOOTER"]
+          text
         end
       end
     end

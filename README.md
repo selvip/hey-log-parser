@@ -46,7 +46,8 @@ Or install it yourself as:
 3. Then run `rake test` to run the tests.
 4. To start parsing, run `bin/start` on the terminal.
 5. Once the result is ready, you can open `config/result` and `config/unique_result`
-6. If there is any errors, you can find `config/error_result` 
+6. You can also see `config/result.html` to view result using HTML table format.
+7. If there is any errors, you can find `config/error_result` 
 
 ## Development
 
