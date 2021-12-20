@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Prepare your file and put it inside directory `config` using file name `webserver.log`. 
+2. Then run `rake test` to run the tests.
+3. To start parsing, run `bin/start` on the terminal.
+4. Once the result is ready, you can open `config/result_log`
+5. If there is any errors, you can find `config/error_result` 
 
 ## Development
 
